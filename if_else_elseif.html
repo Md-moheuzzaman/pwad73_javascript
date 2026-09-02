@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show{
+            font-size: 50px;
+            color: red;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        let score = window.prompt("Enter Score")
+        if(score>= 80){
+            document.getElementById("show").innerHTML = "A+";
+        }else if(score >= 70){
+            document.getElementById("show").innerHTML = "A";
+        } else if(score >= 60){
+            document.getElementById("show").innerHTML = "A-";
+        }else if(score >= 40){
+            document.getElementById("show").innerHTML = "D";
+        }
+        
+        else if (score <= 30){
+            document.getElementById("show").innerHTML = "Fail";
+        }   
+
+    </script>
+</body>
+</html>
