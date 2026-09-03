@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const fruits = ["Apple","Banana", "Mango", "Orange","Grape"];
+
+        // for (let i = 0;i < fruits.length; i++){
+        //     document.write(fruits[i] + "<br>");
+
+        // }
+
+        // const fruits = ["Apple","Banana", "Mango", "Orange","Grape"];
+        // document.write("<ol>")
+
+        // for (let i = 0;i < fruits.length; i++){
+        //     document.write("<li>" + fruits[i] + "</li>");
+
+        // }
+        // document.write("</ol>")
+
+        const fruits = ["Apple","Banana", "Mango", "Orange","Grape"];
+            let output = "<ol>";
+
+        for (let i = 0;i < fruits.length; i++){
+            output += "<li>" + fruits[i] + "</li>";
+
+        }
+        output += "</ol>";
+        document.write(output);
+    </script>
+</body>
+</html>
