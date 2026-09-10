@@ -28,17 +28,24 @@
     </script> -->
 
     <script>
-        const fruits = ["Apple","Banana", "Mango", "Orange","Grape"];
-        let output = "<table border = '1'> <tr>";
-        let i = 0;
-        while(i < fruits.length){
+        // const fruits = ["Apple","Banana", "Mango", "Orange","Grape"];
+        // let output = "<table border = '1'> <tr>";
+        // let i = 0;
+        // while(i < fruits.length){
             
-            output += "<td>" + fruits[i] + "</td>";
-            i++;
-        }
+        //     output += "<td>" + fruits[i] + "</td>";
+        //     i++;
+        // }
 
-        output += "</tr></table> ";
-        document.write(output);
+        // output += "</tr></table> ";
+        // document.write(output);
+        var counter = 50;
+     var teamGroup = "";
+     while(counter > 0) {
+        teamGroup += "Team" + counter + "<br>";
+        counter -= 5;
+     }
+     document.write(teamGroup);
     </script>
 
     
