@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Log-in Form</h3>
+    <div id="show"></div>
+    <form action="" name="myform" onsubmit= "return validation()">
+        <input type="text" name="username" id="" placeholder="Enter Username"> <br>
+        <input type="password" name="password" id="" placeholder="Enter password"> <br>
+        <input type="submit"  name="submit" id="" value="SUBMIT">
+    </form>
+    <script>
+        function validation(){
+            let username = document.myform.username.value;
+            let password = document.myform.password.value;
+            let valid = false;
+          if(username.length < 6 ){
+            alert("username At Least 6 character");
+            valid = false;
+            return false;
+          } else{valid = true}
+          if(password === ""){
+            alert("Password must be enter")
+            valid = false;
+          }else{valid = true}
+          if(valid == false) {
+            alert("username or password not validate")
+          } else {
+            alert("All are validate");
+          }
+        }
+    </script>
+</body>
+</html>
