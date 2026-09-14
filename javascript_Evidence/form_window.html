@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .blue {
-        background-color: aqua;
+      /* .blue { 
+        background-color: lch(74.35% 36.47 196.76);
 
-      }
+      } */
     </style>
   </head>
   <body>
@@ -17,7 +17,26 @@
       <input type="text" name="name" placeholder="Full Name" /><br />
       <textarea name="address" placeholder="Enter Address"></textarea> <br>
       <input type="email" name="email" placeholder="Enter Email" id="">
-      <br />
+      <br>
+      <label for="">Gender :</label> <br>
+      <input type="radio" name="gender" value="male" id="">Male
+      <input type="radio" name="gender" value="female" id="">Female
+      <br>
+      <label for="">District :</label> <br>
+      <select name="district" id="">
+        <option selected disabled value="">Select One</option>
+        <option>Dhaka</option>
+        <option>Bogura</option>
+        <option>Cumilla</option>
+        <option>Naogaon</option>
+        <option>Rangpur</option>
+      </select> <br>
+      <label for="">Hobbies :</label>
+      <input type="checkbox" class="hobbies" value="Cricket">Cricket
+      <input type="checkbox" class="hobbies" value="Video games">Video Games
+      <input type="checkbox" class="hobbies" value="Gardening">Gardening
+      <br>
+
       <input type="button" onclick="mywindow()" name="submit" value="OPEN" />
       <input type="button" onclick="mywindow.close()" name="close" value="CLOSE">
     </form>
@@ -27,10 +46,23 @@
       let name = document.myform.name.value;
       let address = document.myform.address.value;
       let email = document.myform.email.value;
-      let output = "<div class = 'blue'>";
-        output += name + "<br>";
-        output += address + "<br>";
-        output += email + "<br>";
+      let gender = document.myform.gender.value;
+      let district = document.myform.district.value;
+      let hobbies = document.getElementsByClassName("hobbies");
+      let hobbiesOutput = "";
+      for(let i = 0; i < hobbies.length; i++){
+        if(hobbies[i].checked){
+          hobbiesOutput += hobbies[i].value + ", ";
+        }
+      }
+      //console.log(hobbies);
+      let output = "<div style = 'background-color: lch(74.35% 36.47 196.76);' >"; 
+        output += "Name: " + name + "<br>";
+        output += "Address :" + address + "<br>";
+        output += "Email :" + email + "<br>";
+        output += "Gender :" + gender + "<br>";
+        output += "Disrtict :" + district + "<br>";
+        output += "Hobbies :" + hobbiesOutput + "<br>";
         output += "</div>";
         //document.getElementById("show").innerHTML = output;
        mywindow =  window.open("", "", "height:300", "width:600");
