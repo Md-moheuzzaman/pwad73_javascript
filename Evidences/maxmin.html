@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 =parseInt(prompt("Enter a Number",""));
+        let num2 =parseInt(prompt("Enter a Number",""));
+        let num3 =parseInt(prompt("Enter a Number",""));
+
+        function Max(num1,num2,num3){
+            if(num1>=num2 && num1>=num3){
+                alert (num1 + "is max")
+            }else if(num2>=num1 && num2>=num3){
+                alert (num2 + "is max");
+            }else{
+                alert (num3 + "is max");
+            }
+             //document.write(Max);
+        }
+        Max(num1,num2,num3);
+
+        function Min(num1,num2,num3){
+            if(num1<=num2 && num1<=num3){
+                alert (num1 + " Is min")
+            }else if(num2<=num1 && num2<=num3){
+                alert (num2 + " Is min");
+            }else{
+                alert (num3 + " Is min");
+            }
+             //document.write(Min);
+        }
+        Min(num1,num2,num3);
+       
+    </script>
+</body>
+</html>
