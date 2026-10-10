@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let mynum =parseInt(prompt("Enter a Number", ""));
+
+       function check_prime(x){
+         if(x===0){
+            alert(x + " Not allowed");
+            return;
+         }
+        
+        if(x===1){
+            alert(x + " Is not a prime number");
+            return;
+        }else if(x===2){
+            alert(x + " Is a prime number");
+        }else{
+            for(let i = 0;i<x;i++){
+                if(x%2==0){
+                alert (x + " Is not a prime number");
+                return;
+             }
+           }
+            
+        
+        alert(x + " Is a prime number");
+        
+       }
+    }
+
+       check_prime(mynum);
+       
+    </script>
+</body>
+</html>
