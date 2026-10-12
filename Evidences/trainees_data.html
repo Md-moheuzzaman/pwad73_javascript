@@ -16,9 +16,24 @@
             let location = document.myform.location.value;
             
             //alert(location);
-            let output = "";
-            output += "Name:" + name + "<br>";
+            // let output = "";
+            // output += "Name:" + name + "<br>";
+            // output += "contact:" + contact + "<br>";
+            // output += "remarks:" + remarks + "<br>";
+            // output += "gender:" + gender + "<br>";
+            // output += "location:" + location + "<br>";
+            
 
+            let courseOutput = "";
+            const course = document.getElementByClassName("course");
+            
+            for(let i = 0; i<course.length; i++){
+                if(course[i].checked){
+                    courseOutput += course[i].value + ", ";
+                }
+            }
+            let output = "";
+            output += "course: " + courseOutput + "<br>";
 
             let mywin = window.open("","", "height:300,width:300");
             mywin.document.write(output);
@@ -44,6 +59,7 @@
             <option >Mirpur</option>
         </select> <br> <br>
         <button type="button" onclick="getData()">Submit</button>
+
         <!-- <button type="reset">Reset</button> -->
         
     </form>
